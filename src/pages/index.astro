@@ -46,7 +46,7 @@ import Navigation from "../components/Navigation.astro";
     <div class="color-gradient w-full min-h-screen h-full">
       <Navigation />
       <main class="flex flex-col gap-10 py-10 px-6 container mx-auto">
-        <header class="flex flex-col gap-20 place-items-center">
+        <header class="grid place-items-center">
           <Image
             width={350}
             height={350}
@@ -158,10 +158,10 @@ import Navigation from "../components/Navigation.astro";
             </li>
           </ul>
         </section>
-        <section class="flex flex-col gap-10">
-          <h2 class="opacity-50 text-center text-sm">TRUSTED BY</h2>
+        <section class="flex flex-col mt-20 sm:gap-10">
+          <h2 class="opacity-50 text-center text-md">TRUSTED BY</h2>
           <ul
-            class="flex flex-row align-middle justify-evenly place-items-center gap-10 sm:gap-2 flex-wrap opacity-40 w-8/12 mx-auto"
+            class="flex flex-row align-middle justify-evenly place-items-center sm:gap-2 flex-wrap opacity-40 w-8/12 mx-auto"
           >
             <li class="w-32 h-32">
               <Image
