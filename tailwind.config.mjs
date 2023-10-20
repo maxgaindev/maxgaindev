@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "cross-pattern": "url('/circuit-board.svg')",
+        "cross-pattern": "url('/pattern.svg')",
       },
     },
     fontFamily: {
