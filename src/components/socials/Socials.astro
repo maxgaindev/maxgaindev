@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import LinkedinLogo from "./Linkedin.svg";
+---
+
+<nav class="p-4">
+  <ul
+    class="h-full flex flex-row flex-wrap gap-3 w-full justify-center align-middle opacity-50"
+  >
+    <li>
+      <a
+        aria-label="Link to Max Gain Development Linkedin"
+        target="_blank"
+        href="https://www.linkedin.com/company/max-gain-development/"
+        ><Image
+          class="w-6 aspect-square"
+          src={LinkedinLogo}
+          alt="Linkedin Icon"
+          aria-label="Max Gain development Linkedin"
+        /></a
+      >
+    </li>
+  </ul>
+</nav>
