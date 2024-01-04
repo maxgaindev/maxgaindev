@@ -36,7 +36,7 @@ const LanguageSelector: React.FC<Props> = ({ locales }) => {
   return (
     <div className="flex flex-row align-baseline gap-1">
       <svg
-        className="w-5 text-palette-dark"
+        className="w-5"
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
@@ -48,7 +48,7 @@ const LanguageSelector: React.FC<Props> = ({ locales }) => {
       <Select onValueChange={handleChange} defaultValue={selectedLocale}>
         <SelectTrigger
           title="Language selector"
-          className="bg-none text-black border-none p-2"
+          className="bg-none  border-none p-2"
         >
           <SelectValue placeholder="Language" />
         </SelectTrigger>

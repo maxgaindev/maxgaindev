@@ -2,14 +2,11 @@
 import { getI18N } from "@/i18n/data";
 import type { Locale } from "i18n";
 import Contact from "../_images/footer/Contact.svg";
-import Linkedin from "../_images/footer/Linkedin.svg";
-import { Image } from "astro:assets";
-
 const i18n = getI18N(Astro.currentLocale as Locale);
 ---
 
 <footer
-  class="bg-black min-h-[200px] border-t border-palette-lightGray border-opacity-50 flex flex-col md:flex-row gap-10 justify-between p-10"
+  class="bg-black min-h-[200px] border-t border-palette-lightGray border-opacity-30 flex flex-col md:flex-row gap-10 justify-between p-10"
 >
   <div class="flex flex-col gap-1 text-palette-lightGray">
     <p>{i18n.title}</p>

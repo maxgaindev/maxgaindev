@@ -21,7 +21,7 @@ const { title, descriptionInParagraphs, color } = Astro.props;
   <header class="flex flex-col gap-6">
     <div
       class:list={[
-        "grid place-content-center rounded-full w-fit border p-2",
+        "grid place-content-center rounded-full w-fit border p-2 shadow-md",
         {
           "blue-gradient-bottom border-palette-mgd": color === "blue",
           "red-gradient-bottom border-palette-red": color === "red",
@@ -42,32 +42,37 @@ const { title, descriptionInParagraphs, color } = Astro.props;
 
 <style scoped>
   .blue-gradient-top {
-    background: rgb(0, 104, 132);
+    background: #29838d;
     background: radial-gradient(
-      circle at center top,
-      rgba(0, 104, 132, 1) 0%,
-      rgba(0, 0, 63, 0.4) 70%
-    );
+        circle at center top,
+        #29838d 0%,
+        rgba(0, 0, 63, 0.4) 70%
+      ),
+      url("/graph-paper-blue.svg");
   }
 
   .red-gradient-top {
+    background: #c6394c;
     background: radial-gradient(
-      circle at center top,
-      #c6394c 0%,
-      rgba(0, 0, 63, 0.4) 70%
-    );
+        circle at center top,
+        #c6394c 0%,
+        rgba(0, 0, 63, 0.4) 70%
+      ),
+      url("/graph-paper-red.svg");
   }
 
   .orange-gradient-top {
-    background: rgb(244, 158, 88);
+    background: #f49e58;
     background: radial-gradient(
-      circle at center top,
-      rgba(244, 158, 88, 1) 0%,
-      rgba(41, 131, 141, 0.4) 70%
-    );
+        circle at center top,
+        #f49e58 0%,
+        rgba(0, 104, 133, 0.4) 100%
+      ),
+      url("/graph-paper-orange.svg");
   }
 
   .blue-gradient-bottom {
+    background: #29838d;
     background: radial-gradient(
       circle at center bottom,
       #29838d 0%,
@@ -76,6 +81,7 @@ const { title, descriptionInParagraphs, color } = Astro.props;
   }
 
   .red-gradient-bottom {
+    background: #c6394c;
     background: radial-gradient(
       circle at center bottom,
       #c6394c 0%,
@@ -84,11 +90,11 @@ const { title, descriptionInParagraphs, color } = Astro.props;
   }
 
   .orange-gradient-bottom {
-    background: rgb(244, 158, 88);
+    background: #f49e58;
     background: radial-gradient(
       circle at center bottom,
-      rgba(244, 158, 88, 1) 0%,
-      rgba(41, 131, 141, 0.4) 70%
+      #f49e58 0%,
+      rgba(0, 104, 133, 0.4) 100%
     );
   }
 </style>
