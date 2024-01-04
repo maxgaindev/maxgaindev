@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+
+import MGDLogo from "../_images/logo-mgd-monocromo.svg";
+
+import LanguageSelector from "./LanguageSelector";
+import { locales } from "i18n";
+---
+
+<nav class="p-4 h-full bg-palette-white">
+  <ul class="h-full flex flex-row justify-between w-full">
+    <li>
+      <a href="/"
+        ><Image
+          class="w-[200px] md:w-[300px]"
+          src={MGDLogo}
+          alt="Home"
+          aria-label="Max Gain development Home"
+        /></a
+      >
+    </li>
+    <li>
+      <LanguageSelector locales={locales} client:only />
+    </li>
+  </ul>
+</nav>

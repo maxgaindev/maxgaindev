@@ -1,0 +1,55 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import { defaultLocale, locales, type Locale } from "i18n";
+import "@/styles/globals.css";
+
+interface Props {
+  title: string;
+  locale: Locale;
+}
+
+const { title, locale } = Astro.props;
+---
+
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Max Gain Development" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen text-palette-white font-montserrat bg-palette-dark">
+    <div class="w-full min-h-screen h-full flex flex-col gap-10">
+      <Navigation />
+      <main class="text-palette-white container mx-auto flex flex-col gap-10">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+    <style>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+    </style>
+    <script define:vars={{ locales, defaultLocale }}>
+      const savedLocale = localStorage.getItem("lang");
+
+      if (
+        savedLocale &&
+        locales.includes(savedLocale) &&
+        savedLocale !== window.location.pathname.replaceAll("/", "")
+      ) {
+        window.location.pathname = savedLocale;
+      }
+    </script>
+  </body>
+</html>
