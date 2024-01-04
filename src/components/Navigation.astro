@@ -8,8 +8,8 @@ import { locales } from "i18n";
 ---
 
 <nav class="p-4 h-full bg-palette-white">
-  <ul class="h-full flex flex-row justify-between w-full">
-    <li>
+  <ul class="h-full flex flex-row place-items-center justify-between w-full">
+    <li class="h-fit">
       <a href="/"
         ><Image
           class="w-[200px] md:w-[300px]"
@@ -19,7 +19,7 @@ import { locales } from "i18n";
         /></a
       >
     </li>
-    <li>
+    <li class="h-fit">
       <LanguageSelector locales={locales} client:only />
     </li>
   </ul>
