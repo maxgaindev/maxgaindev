@@ -18,24 +18,48 @@ import thunderkick from "./thunderkick.svg";
 import wazdan from "./wazdan.svg";
 import yggdrasil from "./yggdrasil.svg";
 
-export const providerImages: { image: any; title: string }[] = [
-  { image: amatic, title: "Amatic" },
-  { image: edict, title: "Edict" },
-  { image: endorphina, title: "Endorphina" },
-  { image: evolution, title: "Evolution" },
-  { image: feelspin, title: "Feelspin" },
-  { image: gameart, title: "Gameart" },
-  { image: mga, title: "MGA" },
-  { image: microgaming, title: "Microgaming" },
-  { image: oryx, title: "Oryx" },
-  { image: playngo, title: "Playngo" },
-  { image: playtech, title: "Playtech" },
-  { image: pragmatic, title: "Pragmatic" },
-  { image: pushgaming, title: "Pushgaming" },
-  { image: redrake, title: "Redrake" },
-  { image: relax, title: "Relax" },
-  { image: rfranco, title: "Rfranco" },
-  { image: thunderkick, title: "Thunderkick" },
-  { image: wazdan, title: "Wazdan" },
-  { image: yggdrasil, title: "Yggdrasil" },
+export const providerImages: { image: any; title: string; href?: string }[] = [
+  { image: amatic, title: "Amatic", href: "https://www.amatic.com/products/" },
+  { image: edict, title: "Edict", href: "https://www.edict.de/" },
+  { image: endorphina, title: "Endorphina", href: "https://endorphina.com/" },
+  { image: evolution, title: "Evolution", href: "https://www.evolution.com/" },
+  { image: feelspin, title: "Feelspin", href: "https://feelspin.com/" },
+  { image: gameart, title: "Gameart", href: "https://gameart.net/" },
+  { image: mga, title: "MGA", href: "https://mga.games/" },
+  {
+    image: microgaming,
+    title: "Microgaming",
+    href: "https://www.microgaming.co.uk/",
+  },
+  {
+    image: oryx,
+    title: "Oryx",
+    href: "https://bragg.group/solutions/casino-content/studios/oryx-gaming/",
+  },
+  { image: playngo, title: "Playngo", href: "https://www.playngo.com/" },
+  { image: playtech, title: "Playtech", href: "https://www.playtech.com/" },
+  {
+    image: pragmatic,
+    title: "Pragmatic",
+    href: "https://www.pragmaticplay.com/",
+  },
+  {
+    image: pushgaming,
+    title: "Pushgaming",
+    href: "https://www.pushgaming.com/",
+  },
+  { image: redrake, title: "Redrake", href: "https://www.redrakegaming.com/" },
+  { image: relax, title: "Relax", href: "https://relax-gaming.com/" },
+  { image: rfranco, title: "Rfranco", href: "https://www.rfrancogames.com/" },
+  {
+    image: thunderkick,
+    title: "Thunderkick",
+    href: "https://www.thunderkick.com/",
+  },
+  { image: wazdan, title: "Wazdan", href: "https://wazdan.com/" },
+  {
+    image: yggdrasil,
+    title: "Yggdrasil",
+    href: "https://www.yggdrasilgaming.com/",
+  },
 ];
