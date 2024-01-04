@@ -52,7 +52,7 @@ const LanguageSelector: React.FC<Props> = ({ locales }) => {
         >
           <SelectValue placeholder="Language" />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className="bg-palette-dark text-palette-white">
           {locales.map((locale) => (
             <SelectItem
               title={"Show content in " + locale}
