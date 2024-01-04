@@ -3,7 +3,7 @@ export type Locale = (typeof locales)[number];
 
 export const defaultLocale: (typeof locales)[number] = "es";
 
-export const languageNames = {
+export const languageNames: Record<Locale, string> = {
   es: "Español",
   en: "English",
 };
