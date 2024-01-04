@@ -4,6 +4,11 @@ import { defaultLocale, type Locale } from "i18n";
 
 export interface LocaleData {
   weAre: string;
+  weHelpYouBuildYour: string;
+  onlineCasinoSolution: string;
+  offlineCasinoSolution: string;
+  sportsBettingSolution: string;
+  lotterySolution: string;
   title: string;
   descriptionInParagraphs: string[];
   perk1: {

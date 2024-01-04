@@ -1,11 +1,16 @@
 import type { LocaleData } from "./data";
 
 export const en: LocaleData = {
+  weAre: "WE ARE",
   title: "Max Gain Development S.L",
+  weHelpYouBuildYour: "We help you build your",
+  onlineCasinoSolution: "online casino solution.",
+  offlineCasinoSolution: "offline casino solution.",
+  lotterySolution: "lottery solution.",
+  sportsBettingSolution: "sports betting solution.",
   descriptionInParagraphs: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat consequat mauris nunc congue. Porttitor eget dolor morbi non arcu risus. Malesuada fames ac turpis egestas. In mollis nunc sed id semper risus in hendrerit gravida. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Ultrices eros in cursus turpis massa tincidunt. ",
   ],
-  weAre: "WE ARE",
   perk1: {
     title: "Perk 1",
     descriptionInParagraphs: [
