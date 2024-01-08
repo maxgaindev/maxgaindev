@@ -16,6 +16,7 @@ const { title, locale } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <!-- TODO: Add description -->
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content="Max Gain Development" />
@@ -25,6 +26,11 @@ const { title, locale } = Astro.props;
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;800&display=swap"
       rel="stylesheet"
+    />
+    <!-- Animate.css CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   </head>
   <body class="min-h-screen text-palette-white font-montserrat bg-palette-dark">
@@ -71,6 +77,43 @@ const { title, locale } = Astro.props;
       ) {
         window.location.pathname = savedLocale;
       }
+
+      const animations = [...document.querySelectorAll(".animate")];
+      const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          let animationClasses = (
+            entry.target.getAttribute("data-animation") ?? ""
+          ).split(" ");
+
+          if (entry.isIntersecting) {
+            if (
+              !entry.target.getAttribute("data-animation-repeat") &&
+              entry.target.getAttribute("data-animation-repeated")
+            ) {
+              observer.unobserve(entry.target);
+              return;
+            }
+            entry.target.setAttribute("data-animation-repeated", "true");
+            animationClasses.forEach((className) => {
+              entry.target.classList.add(className);
+            });
+            if (entry.target.classList.contains("invisible")) {
+              entry.target.classList.remove("invisible");
+            }
+          } else if (
+            !entry.isIntersecting &&
+            entry.boundingClientRect.top > 0
+          ) {
+            animationClasses.forEach((className) => {
+              entry.target.classList.remove(className);
+            });
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback, {});
+
+      animations.forEach((animation) => observer.observe(animation));
     </script>
   </body>
 </html>

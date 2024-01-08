@@ -47,7 +47,7 @@ const AutoplayCarousel: React.FC<Props> = ({
               {element.href ? (
                 <a
                   target="_blank"
-                  title={"Website of" + element.title}
+                  title={"Website of " + element.title}
                   href={element.href}
                 >
                   <img

@@ -2,51 +2,61 @@
 import { getI18N } from "@/i18n/data";
 import type { Locale } from "i18n";
 import Contact from "../_images/footer/Contact.svg";
+import { Image } from "astro:assets";
 const i18n = getI18N(Astro.currentLocale as Locale);
+
+import Logo from "../_images/logo-mgd-monocromo-mini.svg";
 ---
 
 <footer
-  class="bg-black min-h-[200px] border-t border-palette-lightGray border-opacity-30 flex flex-col md:flex-row gap-10 justify-between p-10"
+  class="mt-10 md:mt-0 bg-black min-h-[200px] border-t border-palette-lightGray border-opacity-30 flex flex-col gap-5 justify-between p-10"
 >
-  <div class="flex flex-col gap-1 text-palette-lightGray">
-    <p>{i18n.title}</p>
-    <p>{i18n.vatCodeLabel}: {i18n.vatCode}</p>
-    <p>{i18n.address}</p>
-    <p>{i18n.zip}</p>
-  </div>
-  <div
-    class="flex flex-row gap-2 align-middle justify-center h-fit place-self-end"
-  >
-    <a
-      target="_blank"
-      title="Contact Max Gain Develoment via Email"
-      href="mailto:contact@maxgain-dev.es"
+  <Image
+    class="self-center md:self-start -mt-20 md:-mt-14 w-[100px] h-[100px]"
+    src={Logo}
+    alt="Logo of Max Gain Development"
+  />
+  <div class="flex flex-col md:flex-row gap-10 justify-between">
+    <div class="flex flex-col gap-1 text-palette-lightGray">
+      <p>{i18n.title}</p>
+      <p>{i18n.vatCodeLabel}: {i18n.vatCode}</p>
+      <p>{i18n.address}</p>
+      <p>{i18n.zip}</p>
+    </div>
+    <div
+      class="flex flex-row gap-2 align-middle justify-center h-fit place-self-end"
     >
-      <svg
-        class="text-palette-white w-5"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 256 256"
-        ><path
-          d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-.15,0L19.57,82.84a16,16,0,0,0-2.42,29.84l85.62,40.55,40.55,85.62A15.86,15.86,0,0,0,157.74,248q.69,0,1.38-.06a15.88,15.88,0,0,0,14-11.51l58.2-191.94c0-.05,0-.1,0-.15A16,16,0,0,0,227.32,28.68ZM157.83,231.85l-.05.14L118.42,148.9l47.24-47.25a8,8,0,0,0-11.31-11.31L107.1,137.58,24,98.22l.14,0L216,40Z"
-        ></path></svg
+      <a
+        target="_blank"
+        title="Contact Max Gain Develoment via Email"
+        href="mailto:contact@maxgain-dev.es"
       >
-    </a>
-    <a
-      target="_blank"
-      title="Max Gain Development's Linkedin"
-      href="https://linkedin.com/company/max-gain-development"
-    >
-      <svg
-        class="text-palette-white w-5"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 256 256"
+        <svg
+          class="text-palette-white w-5"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 256 256"
+          ><path
+            d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-.15,0L19.57,82.84a16,16,0,0,0-2.42,29.84l85.62,40.55,40.55,85.62A15.86,15.86,0,0,0,157.74,248q.69,0,1.38-.06a15.88,15.88,0,0,0,14-11.51l58.2-191.94c0-.05,0-.1,0-.15A16,16,0,0,0,227.32,28.68ZM157.83,231.85l-.05.14L118.42,148.9l47.24-47.25a8,8,0,0,0-11.31-11.31L107.1,137.58,24,98.22l.14,0L216,40Z"
+          ></path></svg
+        >
+      </a>
+      <a
+        target="_blank"
+        title="Max Gain Development's Linkedin"
+        href="https://linkedin.com/company/max-gain-development"
       >
-        <path
-          d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
-        ></path>
-      </svg>
-    </a>
+        <svg
+          class="text-palette-white w-5"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 256 256"
+        >
+          <path
+            d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"
+          ></path>
+        </svg>
+      </a>
+    </div>
   </div>
 </footer>

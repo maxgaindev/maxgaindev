@@ -1,4 +1,6 @@
 ---
+import AnimatedOnViewportEnter from "../components/utils/AnimatedOnViewportEnter.astro";
+
 interface Props {
   title: string;
   descriptionInParagraphs: string[];
@@ -8,37 +10,41 @@ interface Props {
 const { title, descriptionInParagraphs, color } = Astro.props;
 ---
 
-<article
-  class:list={[
-    "rounded border py-7 pt-16 px-4 flex flex-col gap-4 w-full",
+<AnimatedOnViewportEnter animation="animate__animated animate__fadeIn">
+  <article
+    class:list={[
+      "rounded border py-7 pt-16 px-4 flex flex-col gap-4 w-full",
+      {
+        "blue-gradient-top border-palette-mgd shadow-2xl shadow-palette-blue":
+          color === "blue",
+        "red-gradient-top border-palette-red shadow-2xl shadow-palette-red":
+          color === "red",
+        "orange-gradient-top border-palette-orange": color === "orange",
+      },
+    ]}
+  >
+    <header class="flex flex-col gap-6">
+      <div
+        class:list={[
+          "grid place-content-center rounded-full w-fit border p-2 shadow-md",
+          {
+            "blue-gradient-bottom border-palette-mgd": color === "blue",
+            "red-gradient-bottom border-palette-red": color === "red",
+            "orange-gradient-bottom border-palette-orange": color === "orange",
+          },
+        ]}
+      >
+        <slot name="icon" />
+      </div>
+      <h3 class="font-bold text-xl">{title}</h3>
+    </header>
     {
-      "blue-gradient-top border-palette-mgd": color === "blue",
-      "red-gradient-top border-palette-red": color === "red",
-      "orange-gradient-top border-palette-orange": color === "orange",
-    },
-  ]}
->
-  <header class="flex flex-col gap-6">
-    <div
-      class:list={[
-        "grid place-content-center rounded-full w-fit border p-2 shadow-md",
-        {
-          "blue-gradient-bottom border-palette-mgd": color === "blue",
-          "red-gradient-bottom border-palette-red": color === "red",
-          "orange-gradient-bottom border-palette-orange": color === "orange",
-        },
-      ]}
-    >
-      <slot name="icon" />
-    </div>
-    <h3 class="font-bold text-xl">{title}</h3>
-  </header>
-  {
-    descriptionInParagraphs.map((paragraph) => (
-      <p class="text-palette-lightGray text-lg">{paragraph}</p>
-    ))
-  }
-</article>
+      descriptionInParagraphs.map((paragraph) => (
+        <p class="text-palette-lightGray text-lg">{paragraph}</p>
+      ))
+    }
+  </article>
+</AnimatedOnViewportEnter>
 
 <style scoped>
   .blue-gradient-top {
