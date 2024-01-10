@@ -1,7 +1,7 @@
 import type { LocaleData } from "./data";
 
 export const es: LocaleData = {
-  weAre: "Somos",
+  weAre: "SOMOS",
   title: "Max Gain Development S.L",
   weHelpYouBuildYour: "Te ayudamos a construir tu",
   onlineCasinoSolution: "solución de casino online.",
