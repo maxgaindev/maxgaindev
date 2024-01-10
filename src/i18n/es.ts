@@ -3,6 +3,7 @@ import type { LocaleData } from "./data";
 export const es: LocaleData = {
   weAre: "SOMOS",
   title: "Max Gain Development S.L",
+  metaDescription: "Descripción para motores de busqueda",
   weHelpYouBuildYour: "Te ayudamos a construir tu",
   onlineCasinoSolution: "solución de casino online.",
   offlineCasinoSolution: "solución de casino offline.",

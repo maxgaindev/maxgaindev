@@ -3,6 +3,7 @@ import { en } from "./en";
 import { defaultLocale, type Locale } from "i18n";
 
 export interface LocaleData {
+  metaDescription: string;
   weAre: string;
   weHelpYouBuildYour: string;
   onlineCasinoSolution: string;
